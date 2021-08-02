@@ -22,8 +22,7 @@ class CreateEventsTable extends Migration
             $table->timestamp('start_at');
             $table->timestamp('end_at');
             $table->foreignIdFor(User::class);
-
-            $table->bolean('premium');
+            $table->boolean('premium')->default(false);
             $table->timestamps();
         });
     }

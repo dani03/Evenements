@@ -11,6 +11,9 @@ class User extends Authenticatable
 {
     use HasFactory, Notifiable;
 
+    protected $guarded = [];
+
+
     public function events(){
         return $this->hasMany(Event::class);
     }
