@@ -14,7 +14,12 @@ class EventController extends Controller
      */
     public function index()
     {
-        //
+        $events = Event::where('start_at', '>=', now())
+        ->with(['user', 'tags'])
+        ->orderBy('start_at', 'asc')
+        ->get();
+
+        return view('events.index', compact('events'));
     }
 
     /**
