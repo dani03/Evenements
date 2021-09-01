@@ -3,9 +3,9 @@
 <div class="flex flex-wrap">
   @foreach($events as $event)
     
-  <div class="min-h-screen bg-gray-200 flex justify-center items-center {{ $event->premium ? 'border border-yellow-500': ''}} ">
+  <div class="min-h-screen bg-gray-200 flex justify-center items-center  ">
     <!-- Start of component -->
-    <div class="max-w-sm bg-white border-2 border-gray-300 p-6 rounded-md tracking-wide shadow-lg">
+    <div class="max-w-sm bg-white border-2 {{ $event->premium ? 'bg-yellow-500': ''}} border-gray-300 p-6 rounded-md tracking-wide shadow-lg">
        <div id="header" class="flex items-center mb-4"> 
           <img alt="avatar" class="w-20 rounded-full border-2 border-gray-300" src="https://picsum.photos/seed/picsum/200" />
           <div id="header-text" class="leading-5 ml-6 sm">

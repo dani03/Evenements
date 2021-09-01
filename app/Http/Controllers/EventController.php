@@ -48,6 +48,11 @@ class EventController extends Controller
     {
         // dd($request->all());
         $authed_user = auth()->user();
+        $amount = 1000;
+        if($request->filled('premium')) $amount += 500;
+
+        $authed_user->charge($amount, $request->payment_method);
+
        $event = $authed_user->events()->create([
             'title' => $request->title,
             'description' => $request->content,
