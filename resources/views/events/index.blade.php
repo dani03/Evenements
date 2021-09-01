@@ -15,7 +15,8 @@
              <h5 id="job" class="font-semibold text-blue-600"> date debut: {{$event->start_at->translatedFormat('d')}}</h5>
              <h5 id="job" class="font-semibold text-blue-600"> date fin: {{$event->end_at->translatedFormat('M')}}</h5>
              <h5 id="job" class="font-semibold text-blue-600"> date fin: {{$event->end_at->translatedFormat('d')}}</h5>
-          </div>
+            <p>{{$event->description}}</p>
+            </div>
        </div>
        <div id="quote">
          @foreach ($event->tags as $tag)
